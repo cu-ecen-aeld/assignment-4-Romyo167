@@ -22,3 +22,11 @@ test:
         paths:
             - ${CI_PROJECT_DIR}/test.sh.log
         when: always
+image: "cuaesd/aesd-autotest"
+
+variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+
+test:
+    script:
+        - ./test.sh
