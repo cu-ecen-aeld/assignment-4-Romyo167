@@ -5,6 +5,7 @@
 set -e
 set -u
 
+
 NUMFILES=10
 WRITESTR=AELD_IS_FUN
 WRITEDIR=/tmp/aeld-data
