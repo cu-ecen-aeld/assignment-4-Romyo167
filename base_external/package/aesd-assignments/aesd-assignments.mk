@@ -14,9 +14,9 @@ AESD_ASSIGNMENTS_SITE = 'git@github.com:cu-ecen-aeld/assignments-3-and-later-Rom
 AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
-
+old_path = $(PATH)
 toolchain=/usr/local/arm-cross-compiler/install/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/
-export PATH=$(PATH):$(toolchain)/bin/
+export PATH=$(old_path):$(toolchain)/bin/
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app CROSS_COMPILE=aarch64-none-linux-gnu- default
