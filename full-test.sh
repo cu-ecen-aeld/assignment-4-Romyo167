@@ -5,7 +5,7 @@
 set -e
 
 toolchain=/usr/local/arm-cross-compiler/install/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/
-export PATH=$(PATH):$(toolchain)/bin/
+export PATH=$PATH:$toolchain/bin/
 
 cd `dirname $0`
 test_dir=`pwd`
